@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+using System.IO;
 
 namespace WPF_Project
 {
@@ -20,6 +23,8 @@ namespace WPF_Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        public List<string> valores = new List<string>();
+        string path = @"C:\Users\pablo\OneDrive\Desktop\WPF\WPF_Project\WPF_Project\personas.json";
         public MainWindow()
         {
             InitializeComponent();
@@ -29,7 +34,22 @@ namespace WPF_Project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            Persona persona = new Persona();
+            persona.Nombre = nombreTextBox.Text;
+            persona.Apellido = apellidoTextBox.Text;
+            persona.Direccion = direccionTextBox.Text;
+            Guardar(persona);
+            
+        }
+        private void Guardar(Persona persona)
+        {  
+            string jsonString = JsonSerializer.Serialize(persona);
+            System.IO.File.WriteAllText(path, jsonString);
+        }
+        private void Cargar()
+        {
+            string archivo = File.ReadAllText(path);
+            valores = JsonConverter(archivo);
         }
     }
 }

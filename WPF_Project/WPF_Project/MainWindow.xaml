@@ -22,9 +22,9 @@
         <Button Content="Guardar" HorizontalAlignment="Left" Margin="25,53,0,0" VerticalAlignment="Top" Height="48" Width="119" Click="Button_Click" Grid.Row="2" Grid.ColumnSpan="3"/>
         <Label Content="Nombre" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="10,53,0,0" VerticalAlignment="Top" Width="64"/>
         <Label Content="Apellido" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Width="64"/>
-        <TextBox Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="74,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
-        <TextBox Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="74,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
+        <TextBox x:Name="nombreTextBox" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="74,57,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
+        <TextBox x:Name="apellidoTextBox" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="74,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
         <Label Content="Dirección" Grid.ColumnSpan="3" HorizontalAlignment="Left" Margin="10,115,0,0" VerticalAlignment="Top" Width="64"/>
-        <TextBox Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="74,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
+        <TextBox x:Name="direccionTextBox" Grid.ColumnSpan="4" HorizontalAlignment="Left" Margin="74,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210"/>
     </Grid>
 </Window>
